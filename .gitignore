@@ -1,0 +1,5 @@
+
+.DS_Store
+*.ipynb
+crossfilter.min.js
+*.xlsx
