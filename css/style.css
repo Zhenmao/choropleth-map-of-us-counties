@@ -1,0 +1,92 @@
+body {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+.background {
+	fill: none;
+	pointer-events: all;
+}
+
+.countypolygons {
+	stroke: #fff;
+	stroke-linejoin: round;
+}
+
+.statepolygons {
+	fill: #fff;
+	pointer-events: all;
+	cursor: pointer;
+}
+
+.statenames-bg {
+	fill: none;
+	font-weight: bold;
+	stroke: #fff;
+	stroke-width: 2px;
+	pointer-events: none;
+}
+
+.statenames {
+	fill: #000;
+	font-weight: bold;
+	pointer-events: none;
+}
+
+#stateborders {
+	fill: none;
+	stroke: #fff;
+	stroke-linejoin: round;
+}
+
+#statetitle {
+	fill: #000;
+	font-weight: bold;
+	font-size: 48px;
+}
+
+#tooltip {
+	opacity: 0;
+	position: absolute;
+	pointer-events: none;
+	padding: 10px;
+	font-weight: bold;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#play-button {
+	margin-left: 600px;
+	background-color: #2171B5;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 6px 12px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.caption {
+	fill: #000;
+	text-anchor: start;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+/* Slider */
+.track {
+	fill: #C6DBEF;
+}
+
+.track-overlay {
+	fill: none;
+	stroke-width: 20px;
+	cursor: pointer;
+	pointer-events: all;
+}
+
+.handle {
+	fill: #2171B5;
+	stroke: none;
+}
