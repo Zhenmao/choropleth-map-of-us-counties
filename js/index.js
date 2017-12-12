@@ -154,8 +154,8 @@ const handle = slider.insert("circle", ".track-overlay")
 /////////////////////////////////////////////////////////////////
 d3.queue()
 		.defer(d3.json, "https://d3js.org/us-10m.v1.json")
-		.defer(d3.json, "../data/stateid2statename.json")
-		.defer(d3.json, "../data/unemployment.json")
+		.defer(d3.json, "data/stateid2statename.json")
+		.defer(d3.json, "data/unemployment.json")
 		.await(processData);
 
 function processData(error, us, stateid2statename, unemployment) {
