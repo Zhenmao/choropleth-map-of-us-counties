@@ -1,24 +1,53 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<html>
-<head>
-	<title>US Unemployment Rates by Counties</title>
-
-	<!-- Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<!-- D3 -->
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-	<script src="https://d3js.org/topojson.v2.min.js"></script>
-
-</head>
-<body>
-	<h1>US Unemployment Rate by Counties</h1>
-
-	<!-- Animation play button -->
-	<div><button id="play-button">PLAY</button></div>
-
-	<script src="js/index.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>US Unemployment Rates 2001-2020</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/scrubber.css" />
+    <link rel="stylesheet" href="css/tooltip.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <h1
+          >US Unemployment Rates <br />
+          2001-2020</h1
+        >
+        <div class="scrubber-container">
+          <div id="year-control"></div>
+        </div>
+        <div class="map-container">
+          <div id="choropleth"></div>
+        </div>
+        <div class="legend-container">
+          <div id="legend"></div>
+        </div>
+      </main>
+      <footer class="text-muted">
+        <ul class="list-unstyled">
+          <li
+            >Data source: Unemployment data are extracted from
+            <a href="https://www.bls.gov/lau/#tables" target="_blank"
+              >Bureau of Labor Statistics Local Area Unemployment Statistics</a
+            ></li
+          >
+        </ul>
+      </footer>
+    </div>
+    <!-- JS -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="js/process-data.js"></script>
+    <script src="js/scrubber.js"></script>
+    <script src="js/legend.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/line-chart.js"></script>
+    <script src="js/choropleth.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>
