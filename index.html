@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,17 +7,18 @@
     <title>US Unemployment Rates 2001-2020</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/loader.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/scrubber.css" />
     <link rel="stylesheet" href="css/tooltip.css" />
   </head>
   <body>
     <div class="container">
+      <h1
+        >US Unemployment Rates <br />
+        2001-2020</h1
+      >
       <main>
-        <h1
-          >US Unemployment Rates <br />
-          2001-2020</h1
-        >
         <div class="scrubber-container">
           <div id="year-control"></div>
         </div>
@@ -38,6 +39,9 @@
           >
         </ul>
       </footer>
+    </div>
+    <div class="loader-container">
+      <div class="loader"></div>
     </div>
     <!-- JS -->
     <script src="https://d3js.org/d3.v7.min.js"></script>

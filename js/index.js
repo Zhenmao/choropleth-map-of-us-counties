@@ -15,12 +15,13 @@ Promise.all([
     valueExtent,
   });
 
+  d3.select(".loader-container").remove();
+
   const color = d3
     .scaleQuantize()
     .domain(valueExtent)
     .range(d3.schemeBlues[8])
     .nice();
-
   Legend(document.getElementById("legend"), color, {
     title: "Unemployment %",
     height: 54,
@@ -29,7 +30,6 @@ Promise.all([
 
   const years = d3.range(yearExtent[0], yearExtent[1] + 1);
   const initialYear = years[years.length - 1];
-
   const choropleth = new Choropleth({
     el: document.getElementById("choropleth"),
     stateFeatureCollection,
@@ -43,7 +43,6 @@ Promise.all([
     initial: years[years.length - 1],
     delay: 2000,
   });
-
   yearControl.addEventListener("input", (event) => {
     const yearIndex = event.target.valueAsNumber;
     const year = years[yearIndex];

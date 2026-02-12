@@ -1,6 +1,7 @@
 :root {
   --map-width: 975px;
   --content-max-width: 720px;
+  height: 100%;
 }
 
 body {
@@ -8,6 +9,7 @@ body {
   color: #212121;
   line-height: 1.5;
   font-size: 1rem;
+  height: 100%;
 }
 
 h1,
@@ -20,17 +22,30 @@ h6 {
   line-height: 1.2;
 }
 
+a {
+  color: currentColor;
+}
+
 h1 {
   text-align: center;
   font-weight: 400;
   font-size: 3rem;
 }
 
+.loader-container {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+}
+
 .container {
-  margin: 3rem auto;
+  margin-inline: auto;
+  padding-block: 3rem;
   display: grid;
   gap: 3rem;
   justify-items: center;
+  min-height: 100%;
 }
 
 main,
@@ -38,6 +53,10 @@ footer {
   display: grid;
   gap: 3rem;
   justify-items: center;
+}
+
+footer {
+  align-items: flex-end;
 }
 
 main > *,
@@ -121,8 +140,11 @@ button {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   button {
