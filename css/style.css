@@ -12,6 +12,12 @@ body {
   height: 100%;
 }
 
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -29,7 +35,7 @@ a {
 h1 {
   text-align: center;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .loader-container {
@@ -41,7 +47,7 @@ h1 {
 
 .container {
   margin-inline: auto;
-  padding-block: 3rem;
+  padding: 3rem 1.5rem;
   display: grid;
   gap: 3rem;
   justify-items: center;
@@ -57,16 +63,20 @@ footer {
 
 footer {
   align-items: flex-end;
-}
-
-main > *,
-footer > * {
-  width: 100%;
   max-width: var(--content-max-width);
 }
 
+.scrubber-container {
+  justify-self: stretch;
+  display: flex;
+  justify-content: center;
+}
+
+.scrubber-container > * {
+  flex-basis: var(--content-max-width);
+}
+
 .map-container {
-  width: var(--map-width);
   max-width: var(--map-width);
 }
 
